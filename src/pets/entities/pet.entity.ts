@@ -34,5 +34,5 @@ export class PetEntity {
   height: number;
 
   @ManyToOne(() => UserEntity, (user) => user.pets)
-  user: UserEntity;
+  userId: UserEntity;
 }
