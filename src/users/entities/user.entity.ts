@@ -13,11 +13,8 @@ export class UserEntity {
   email: string;
 
   @Column()
-  firstName: string;
+  fullName: string;
 
-  @Column()
-  secondName: string;
-
-  @OneToMany(() => PetEntity, (pet) => pet.user)
+  @OneToMany(() => PetEntity, (pet) => pet.userId)
   pets: PetEntity[];
 }
